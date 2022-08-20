@@ -2,12 +2,13 @@
 
 :root {
     --main-color: #000000;
-    --secondary-color: #1d087d;
+    --secondary-color: #0630e8;
     --accent-color: #f9f900;
 }
 
 body {
     font-size: 20px;
+    background-color: #c0c0c0ac;
 }
 
 
@@ -17,10 +18,10 @@ body {
     z-index: 22;
     top: 0;
     width: 100%;
-    padding: 30px;
+    padding: 10px;
     background-color: var(--secondary-color);
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .search-form {
@@ -43,33 +44,35 @@ body {
 }
 
 .photo-card {
-    box-shadow: 5px 5px 20px #0e1d31;
-    border: 1px solid #0e1d31;
-    border-radius: 25px;
+   
+    border: 1px solid #000000;
+    border-radius: 15px;
     overflow: hidden;
 }
 
 button {
-    width: 220px;
-    height: 60px;
+    width: 100px;
+    height: 50px;
     background-color: var(--accent-color);
     color: var(--main-color);
     border-radius: 25px;
     cursor: pointer;
-    outline: none;
+    
 }
 
 button:hover {
-    font-size: 26px;
-    font-weight: 700;
+    font-weight: 150;
+    font-size: smaller;
+    
 }
 
 .search-form__btn-search {
-    margin-left: 30px;
+    margin-left: 5px;
 }
 
 .search-form__btn-load {
-    margin-left: auto;
+    width: 200px;
+    margin-left: 20px;
     margin-right: auto;
 }
 
@@ -80,7 +83,8 @@ button:hover {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    width: auto;
+    
 }
 
 .info-item:not(:last-child) {
@@ -146,9 +150,10 @@ a {
 input {
     margin-left: auto;
     padding: 15px;
-    width: 320px;
+    width: 250px;
+    height: 50px;
     border-radius: 25px;
-    outline: none;
+    
 }
 
 .search-form__btn-load:disabled {
