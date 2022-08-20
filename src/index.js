@@ -5,8 +5,7 @@ import { renderGallery } from './render';
 
 const refs = {
     form: document.querySelector('.search-form'),
-    btnSearch: document.querySelector('.search-form__btn-search'),
-    btnLoadMore: document.querySelector('.search-form__load-more'),
+    loadMoreBtn: document.querySelector('.search-form__load-more'),
     gallery: document.querySelector('.gallery')
 }
 
@@ -27,15 +26,15 @@ let searchQuery = '';
 let pageCount = 1;
 let imagesShown = 0;
   
-async function fetchImages(searchQuery) {
+async function getImages(searchQuery) {
     const response = await axios.get(`${BASE_URL}?key=${KEY}&q=${searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${pageCount}`);
     return response;
 }
 
-refs.form.addEventListener('submit', onImageSearch);
-refs.btnLoadMore.addEventListener('click', onBtnClickLoadMoreImages);
+refs.form.addEventListener('submit', searchImages);
+refs.loadMoreBtn.addEventListener('click', onBtnClickLoadMoreImages);
 
-function onImageSearch(event) {
+function searchImages(event) {
     event.preventDefault();
 
     imagesShown = 0;
@@ -56,11 +55,11 @@ function onBtnClickLoadMoreImages(event) {
 
     pageCount += 1;
     processImages();    
-    imagesScroll();
+    scrollImages();
 }
 
 function processImages(response) {
-    fetchImages(searchQuery)
+    getImages(searchQuery)
         .then(response => {
             if (response.data.hits.length === 0) {
                 Notify.failure('Sorry, there are no images matching your search query. Please try again.', {
@@ -76,10 +75,10 @@ function processImages(response) {
                 refs.gallery.insertAdjacentHTML('beforeend', galleryListMarkup);
                 lightbox.refresh();
                 
-                if (response.data.hits.length > 0) refs.btnLoadMore.removeAttribute('disabled');
+                if (response.data.hits.length > 0) refs.loadMoreBtn.removeAttribute('disabled');
                 if (imagesShown >= response.data.totalHits) {
                     Notify.info(`We're sorry, but you've reached the end of search results.`);
-                    refs.btnLoadMore.setAttribute('disabled', true);
+                    refs.loadMoreBtn.setAttribute('disabled', true);
                     refs.form.reset();
                     imagesShown = 0;
                 }
@@ -90,7 +89,7 @@ function processImages(response) {
         }));
 }
 
-function imagesScroll() {
+function scrollImages() {
 const { height: cardHeight } = document
   .querySelector(".gallery")
   .firstElementChild.getBoundingClientRect();

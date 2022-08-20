@@ -3,7 +3,7 @@
 :root {
     --main-color: #000000;
     --secondary-color: #0630e8;
-    --accent-color: #f9f900;
+    --other-color: #f9f900;
 }
 
 body {
@@ -43,9 +43,8 @@ body {
     margin-left: 30px;
 }
 
-.photo-card {
-   
-    border: 1px solid #000000;
+.picture {
+   border: 1px solid #000000;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -53,9 +52,9 @@ body {
 button {
     width: 100px;
     height: 50px;
-    background-color: var(--accent-color);
+    background-color: var(--other-color);
     color: var(--main-color);
-    border-radius: 25px;
+    border-radius: 15px;
     cursor: pointer;
     
 }
@@ -94,58 +93,12 @@ button:hover {
 .info-item {
     position: relative;
     width: auto;
+    color: #000000;
 }
 
-// .info-item.likes::before {
-//     position: absolute;
-//     top: -30px;
-//     right: 5px;
-//     content: '';
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     width: 30px;
-//     height: 30px;
-// }
-
-// .info-item.comments::before {
-//     position: absolute;
-//     top: -30px;
-//     right: 30px;
-//     content: '';
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     filter: hue-rotate(90deg);
-//     width: 30px;
-//     height: 30px;
-// }
-
-// .info-item.views::before {
-//     position: absolute;
-//     top: -30px;
-//     right: 15px;
-//     content: '';
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     filter: hue-rotate(90deg);
-//     width: 30px;
-//     height: 30px;
-// }
-
-// .info-item.downloads::before {
-//     position: absolute;
-//     top: -30px;
-//     right: 35px;
-//     content: '';
-//     background-repeat: no-repeat;
-//     background-size: contain;
-//     filter: hue-rotate(90deg);
-//     width: 30px;
-//     height: 30px;
-// }
 
 a {
     text-decoration: none;
-    color: var(--secondary-color);
 }
 
 input {
@@ -153,7 +106,7 @@ input {
     padding: 15px;
     width: 250px;
     height: 50px;
-    border-radius: 25px;
+    border-radius: 15px;
     
 }
 
