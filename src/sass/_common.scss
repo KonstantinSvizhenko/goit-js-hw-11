@@ -13,7 +13,7 @@ body {
 
 
 
-.search-pannel {
+.top-panel {
     position: sticky;
     z-index: 22;
     top: 0;
@@ -70,7 +70,7 @@ button:hover {
     margin-left: 5px;
 }
 
-.search-form__btn-load {
+.search-form__load-more {
     width: 200px;
     margin-left: 20px;
     margin-right: auto;
@@ -93,54 +93,55 @@ button:hover {
 
 .info-item {
     position: relative;
+    width: auto;
 }
 
-.info-item.likes::before {
-    position: absolute;
-    top: -30px;
-    right: 5px;
-    content: '';
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-}
+// .info-item.likes::before {
+//     position: absolute;
+//     top: -30px;
+//     right: 5px;
+//     content: '';
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     width: 30px;
+//     height: 30px;
+// }
 
-.info-item.comments::before {
-    position: absolute;
-    top: -30px;
-    right: 30px;
-    content: '';
-    background-repeat: no-repeat;
-    background-size: contain;
-    filter: hue-rotate(90deg);
-    width: 30px;
-    height: 30px;
-}
+// .info-item.comments::before {
+//     position: absolute;
+//     top: -30px;
+//     right: 30px;
+//     content: '';
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     filter: hue-rotate(90deg);
+//     width: 30px;
+//     height: 30px;
+// }
 
-.info-item.views::before {
-    position: absolute;
-    top: -30px;
-    right: 15px;
-    content: '';
-    background-repeat: no-repeat;
-    background-size: contain;
-    filter: hue-rotate(90deg);
-    width: 30px;
-    height: 30px;
-}
+// .info-item.views::before {
+//     position: absolute;
+//     top: -30px;
+//     right: 15px;
+//     content: '';
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     filter: hue-rotate(90deg);
+//     width: 30px;
+//     height: 30px;
+// }
 
-.info-item.downloads::before {
-    position: absolute;
-    top: -30px;
-    right: 35px;
-    content: '';
-    background-repeat: no-repeat;
-    background-size: contain;
-    filter: hue-rotate(90deg);
-    width: 30px;
-    height: 30px;
-}
+// .info-item.downloads::before {
+//     position: absolute;
+//     top: -30px;
+//     right: 35px;
+//     content: '';
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//     filter: hue-rotate(90deg);
+//     width: 30px;
+//     height: 30px;
+// }
 
 a {
     text-decoration: none;
@@ -156,7 +157,7 @@ input {
     
 }
 
-.search-form__btn-load:disabled {
+.search-form__load-more:disabled {
     opacity: 0;
     cursor: default;
 }

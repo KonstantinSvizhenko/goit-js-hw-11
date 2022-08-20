@@ -6,7 +6,7 @@ import { renderGallery } from './render';
 const refs = {
     form: document.querySelector('.search-form'),
     btnSearch: document.querySelector('.search-form__btn-search'),
-    btnLoadMore: document.querySelector('.search-form__btn-load'),
+    btnLoadMore: document.querySelector('.search-form__load-more'),
     gallery: document.querySelector('.gallery')
 }
 
