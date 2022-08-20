@@ -1,7 +1,7 @@
 export function renderGallery({webformatURL, largeImageURL, likes, tags, views, comments, downloads}) {
   return `
   <a class="gallery__item" href="${largeImageURL}">
-    <div class="picture">
+    <div class="photo-card">
       <img src="${webformatURL}" alt="${tags}" loading="lazy" width="400px" height="300px"/>
     <div class="info">
     <p class="info-item likes">
