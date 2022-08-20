@@ -1,1 +1,157 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+:root {
+    --main-color: #000000;
+    --secondary-color: #1d087d;
+    --accent-color: #f9f900;
+}
+
+body {
+    font-size: 20px;
+}
+
+
+
+.search-pannel {
+    position: sticky;
+    z-index: 22;
+    top: 0;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--secondary-color);
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+
+.gallery__item {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.photo-card {
+    box-shadow: 5px 5px 20px #0e1d31;
+    border: 1px solid #0e1d31;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+button {
+    width: 220px;
+    height: 60px;
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.search-form__btn-search {
+    margin-left: 30px;
+}
+
+.search-form__btn-load {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.info-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.info-item {
+    position: relative;
+}
+
+.info-item.likes::before {
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+}
+
+.info-item.comments::before {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: hue-rotate(90deg);
+    width: 30px;
+    height: 30px;
+}
+
+.info-item.views::before {
+    position: absolute;
+    top: -30px;
+    right: 15px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: hue-rotate(90deg);
+    width: 30px;
+    height: 30px;
+}
+
+.info-item.downloads::before {
+    position: absolute;
+    top: -30px;
+    right: 35px;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: hue-rotate(90deg);
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+input {
+    margin-left: auto;
+    padding: 15px;
+    width: 320px;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-form__btn-load:disabled {
+    opacity: 0;
+    cursor: default;
+}
